@@ -11,8 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Controller {
-    // Janela inicial
+public class ControllerStartWindow {
     @FXML private Button btnLogin;
     @FXML private Button btnRegister;
 
