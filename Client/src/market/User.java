@@ -4,17 +4,15 @@ package market;
  * Created by Marcio on 17/06/2015.
  */
 public class User {
-    private String firstName;
-    private String lastName;
+    private String Name;
     private String address;
     private String phone;
     private String email;
     private String id;
     private String password;
 
-    public User(String firstName, String lastName, String address, String phone, String email, String id, String password){
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public User(String Name, String address, String phone, String email, String id, String password){
+        this.Name = Name;
         this.address = address;
         this.phone = phone;
         this.email = email;
@@ -38,12 +36,8 @@ public class User {
         this.password = password;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
+    public String getName() {
+        return Name;
     }
 
     public String getAddress() {

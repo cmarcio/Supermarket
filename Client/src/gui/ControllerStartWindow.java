@@ -19,6 +19,7 @@ public class ControllerStartWindow {
     @FXML void handleStartWindow(ActionEvent event) {
         Button source = (Button) event.getSource();
         if (source == btnLogin) {
+            loadWindow(source, "Login_cliente.fxml");
         }
         else {
             loadWindow(source, "CadastrarUsuario_cliente.fxml");

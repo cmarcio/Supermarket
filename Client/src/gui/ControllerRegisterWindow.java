@@ -12,7 +12,6 @@ import javafx.scene.control.TextField;
  */
 public class ControllerRegisterWindow extends ControllerStartWindow {
     @FXML private TextField txtName;
-    @FXML private TextField txtLastName;
     @FXML private TextField txtAddress;
     @FXML private TextField txtPhone;
     @FXML private TextField txtEmail;
@@ -20,10 +19,6 @@ public class ControllerRegisterWindow extends ControllerStartWindow {
     @FXML private TextField txtPassword;
     @FXML private Button btnRegister;
     @FXML private Button btnCancel;
-
-    @FXML private void handleTextField(ActionEvent event) {
-        TextField source = (TextField) event.getSource();
-    }
 
     @FXML private void handleButtonAction(ActionEvent event) {
         if (event.getSource() == btnCancel) {
@@ -40,7 +35,7 @@ public class ControllerRegisterWindow extends ControllerStartWindow {
 
     private boolean verifyTextFields(){
         // Verifica se todos os campos foram preenchidos
-        if (txtName.getText().isEmpty() || txtLastName.getText().isEmpty() || txtAddress.getText().isEmpty()
+        if (txtName.getText().isEmpty() || txtAddress.getText().isEmpty()
                 || txtPhone.getText().isEmpty() || txtEmail.getText().isEmpty()
                 || txtId.getText().isEmpty() || txtPassword.getText().isEmpty()) {
             showMessage("Aviso", "Campos Incorretos", "Você deve preencher antes de continuar", Alert.AlertType.WARNING);

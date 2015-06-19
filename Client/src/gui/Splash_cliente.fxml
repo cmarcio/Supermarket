@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ControllerStartWindow">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfffed" height="250.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="315.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffb3a8" height="66.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="287.0" />
@@ -27,16 +27,8 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Button fx:id="btnLogin" layoutX="80.0" layoutY="97.0" mnemonicParsing="false" onAction="#handleStartWindow" prefHeight="37.0" prefWidth="155.0" text="Login">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnRegister" layoutX="80.0" layoutY="146.0" mnemonicParsing="false" onAction="#handleStartWindow" prefHeight="37.0" prefWidth="155.0" text="Cadastrar">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
       <Text fill="#a51fff" layoutX="192.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By Márcio and Marly" />
+      <ProgressBar layoutX="58.0" layoutY="130.0" prefWidth="200.0" />
+      <Label layoutX="126.0" layoutY="148.0" text="Conectando ao sistema..." />
    </children>
 </AnchorPane>
