@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ControllerStartWindow">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfffed" height="250.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="315.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffb3a8" height="66.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="287.0" />
+      <Text fill="WHITE" layoutX="88.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ades Market">
+         <font>
+            <Font name="Segoe UI" size="36.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a51fff42" height="8.0" layoutX="14.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="287.0" />
+      <Rectangle height="153.0" layoutX="14.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="287.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.7714285714285715">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#bfffed" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Button fx:id="btnLogin" layoutX="80.0" layoutY="97.0" mnemonicParsing="false" onAction="#handleStartWindow" prefHeight="37.0" prefWidth="155.0" text="Login">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRegister" layoutX="80.0" layoutY="146.0" mnemonicParsing="false" onAction="#handleStartWindow" prefHeight="37.0" prefWidth="155.0" text="Cadastrar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Text fill="#a51fff" layoutX="192.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By Márcio and Marly" />
+   </children>
+</AnchorPane>

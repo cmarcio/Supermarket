@@ -43,6 +43,8 @@ public class ConnectionsManager implements Runnable {
             else port = 0;
             // Tenta de novo
             this.run();
+        } finally {
+            // encerra as conexões
         }
     }
 }

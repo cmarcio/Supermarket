@@ -5,10 +5,10 @@ import java.io.*;
 /**
  * Created by Marcio on 18/06/2015.
  */
-public class FileCSV {
+public abstract class FileCsv {
     private File csv;
 
-    public FileCSV(String fileName) {
+    public FileCsv(String fileName) {
         // Verifica se o diretório de dados já foi criado
         File folder = new File("data");
         if (!folder.exists())
@@ -18,7 +18,7 @@ public class FileCSV {
         csv = new File(folder, fileName);
     }
 
-    public void storeUser(String[] fields) {
+    public synchronized void store(String[] fields) {
         FileWriter fileWriter = null;
         try {
             fileWriter = new FileWriter(csv, true);
@@ -34,7 +34,7 @@ public class FileCSV {
             fileWriter.close();
 
         } catch (IOException e) {
-            System.err.println("ERROR SAVING USER IN FILE!");
+            System.err.println("ERROR SAVING FILE!");
             e.printStackTrace();
         }
     }
