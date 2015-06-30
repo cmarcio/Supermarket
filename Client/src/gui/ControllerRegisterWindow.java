@@ -1,5 +1,6 @@
 package gui;
 
+import connection.Connection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -24,10 +25,15 @@ public class ControllerRegisterWindow extends ControllerStartWindow {
             loadWindow(btnCancel, "Inicio_client.fxml");
         }
         else if (event.getSource() == btnRegister && verifyTextFields()) {
-            //FileCSV = new FileCSV("users.csv");
+            String[] fields = {txtName.getText(), txtAddress.getText(), txtPhone.getText(), txtEmail.getText(), txtId.getText(), txtPassword.getText()};
+            Connection serverConnection = new Connection();
+            if( !serverConnection.registerUser(fields) )
+                showMessage("Erro", "Falha ao registrar usuário", "Usuário já existe", Alert.AlertType.ERROR);
+            else
+                showMessage("Sucesso", null, "Novo usuário registrado com sucesso", Alert.AlertType.INFORMATION);
         }
         else {
-
+            showMessage("Aviso", null, "Verifique se todos os campos foram preenchidos corretamente e tente novamente", Alert.AlertType.WARNING);
         }
     }
 
@@ -40,13 +46,10 @@ public class ControllerRegisterWindow extends ControllerStartWindow {
             return false;
         }
         // Verifica se o número de telefone é válido
-        else if (isValidNumber(txtPhone)) {
+        else if (!isValidNumber(txtPhone)) {
             showMessage("Aviso", "Telefone Inválido", "O campo Telefone deve conter apenas numeros", Alert.AlertType.WARNING);
             return false;
         }
-        /*else if (idExists()){
-            return false;
-        }*/
         else return true;
     }
 

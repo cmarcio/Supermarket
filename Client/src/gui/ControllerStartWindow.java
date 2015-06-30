@@ -16,7 +16,7 @@ public class ControllerStartWindow {
     @FXML private Button btnRegister;
 
     // Abre uma janela de acordo com o botão clicado
-    @FXML void handleStartWindow(ActionEvent event) {
+    @FXML private void handleStartWindow(ActionEvent event) {
         Button source = (Button) event.getSource();
         if (source == btnLogin) {
             loadWindow(source, "Login_cliente.fxml");
