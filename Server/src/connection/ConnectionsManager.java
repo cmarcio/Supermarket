@@ -12,31 +12,17 @@ public class ConnectionsManager implements Runnable {
 
     @Override
     public void run() {
-        ServerSocket server = null;
         try {
+            // Tenta criar um socket
+            ServerSocket server = null;
             server = new ServerSocket(port);
             System.out.println("Server started! port: " + port);
 
-
-        } catch (IOException e) {
-            System.err.println("Erro ao criar socket na porta especificada");
-            e.printStackTrace();
-            // Muda a porta
-            if (port >= 0 && port < 65535)
-                port ++;
-            else port = 0;
-            // Tenta de novo
-            this.run();
-        }
-
-        // Cria uma thread que fica apenas aceitando conexões
-        final ServerSocket finalServer = server;
-        new Thread(()->{
-            while (true) {
+            Socket client = null;
+            for(;;) {
                 // Aguarda conexão do cliente
-                Socket client = null;
                 try {
-                    client = finalServer.accept();
+                    client = server.accept();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -47,6 +33,16 @@ public class ConnectionsManager implements Runnable {
                 Thread threadClient = new Thread(clientConnection);
                 threadClient.run();
             }
-        });
+
+        } catch (IOException e) {
+            System.err.println("Erro ao criar socket na porta: " + port);
+            //e.printStackTrace();
+            // Muda a porta
+            if (port >= 0 && port < 65535)
+                port ++;
+            else port = 0;
+            // Tenta de novo
+            this.run();
+        }
     }
 }
