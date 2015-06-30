@@ -1,6 +1,5 @@
 package gui;
 
-import csv.FileCSV;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -26,7 +25,6 @@ public class ControllerRegisterWindow extends ControllerStartWindow {
         }
         else if (event.getSource() == btnRegister && verifyTextFields()) {
             //FileCSV = new FileCSV("users.csv");
-
         }
         else {
 
