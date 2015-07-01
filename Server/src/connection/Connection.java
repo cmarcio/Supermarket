@@ -13,5 +13,14 @@ public class Connection implements Runnable{
 
     @Override
     public void run() {
+        Receive receive = new Receive(client);
+
+        while (true) {
+            if (receive.hasNextLine()){
+                String command = receive.nextLine();
+                if (command.compareTo("new user") == 0 )
+
+            }
+        }
     }
 }
