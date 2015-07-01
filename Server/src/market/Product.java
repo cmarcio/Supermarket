@@ -9,14 +9,21 @@ public class Product {
     public String name;
     public float price;
     public GregorianCalendar expirationDay;
-    public Vendor vendor;
+    public String vendor;
     public int quantity;
 
-    public Product(String name, float price, Vendor vendor) {
+    public Product(String name, float price, String vendor) {
         this.name = name;
         this.price = price;
         this.vendor = vendor;
         this.quantity = 0;
+    }
+
+    public Product(String[] fields) {
+        this.name = fields[0];
+        this.price = Float.parseFloat(fields[1]);
+        this.vendor = fields[2];
+        this.quantity = Integer.parseInt(fields[3]);
     }
 
     public void setPrice(float price) {
@@ -39,7 +46,7 @@ public class Product {
         return price;
     }
 
-    public Vendor getVendor() {
+    public String getVendor() {
         return vendor;
     }
 

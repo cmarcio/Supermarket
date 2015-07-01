@@ -1,6 +1,6 @@
 package gui;
 
-import connection.Connection;
+import connection.Communication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -21,17 +21,26 @@ public class ControllerRegisterWindow extends ControllerStartWindow {
     @FXML private Button btnCancel;
 
     @FXML private void handleButtonAction(ActionEvent event) {
+        // Se o usuário clicou em cancelar
         if (event.getSource() == btnCancel) {
-            loadWindow(btnCancel, "Inicio_client.fxml");
+            loadWindow(btnCancel, "Inicio_cliente.fxml");
         }
+        // Se o usuário clicou em cadastrar e todos os campos estão corretos
         else if (event.getSource() == btnRegister && verifyTextFields()) {
+            // Salva os campos
             String[] fields = {txtName.getText(), txtAddress.getText(), txtPhone.getText(), txtEmail.getText(), txtId.getText(), txtPassword.getText()};
-            Connection serverConnection = new Connection();
-            if( !serverConnection.registerUser(fields) )
-                showMessage("Erro", "Falha ao registrar usuário", "Usuário já existe", Alert.AlertType.ERROR);
+            // Cria um objeto de comunicação com o servidor
+            Communication serverCommunication = new Communication();
+            // Se o precesso de cadastro retornou falha
+            if( !serverCommunication.registerUser(fields) )
+                showMessage("Erro", "Falha ao registrar usuário", "Usuário já existe ou falha de conexão", Alert.AlertType.ERROR);
+            // Se o processo de cadastro retornou exito
             else
                 showMessage("Sucesso", null, "Novo usuário registrado com sucesso", Alert.AlertType.INFORMATION);
+            // Volta pra tela inicial
+            loadWindow(btnRegister, "Inicio_cliente.fxml");
         }
+        // Se o usuário tentou cadastrar sem preencher os campos corretamente
         else {
             showMessage("Aviso", null, "Verifique se todos os campos foram preenchidos corretamente e tente novamente", Alert.AlertType.WARNING);
         }

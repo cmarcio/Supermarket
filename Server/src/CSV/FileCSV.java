@@ -1,6 +1,7 @@
 package csv;
 
 import java.io.*;
+import java.util.ArrayList;
 
 /**
  * Created by Marcio on 18/06/2015.
@@ -18,24 +19,34 @@ public abstract class FileCsv {
         csv = new File(folder, fileName);
     }
 
-    public synchronized void store(String[] fields) {
+    public synchronized boolean store(String[] fields) {
         FileWriter fileWriter = null;
         try {
             fileWriter = new FileWriter(csv, true);
             PrintWriter output = new PrintWriter(fileWriter);
 
             // Escreve os dados do usuário no arquivo
-            for (int i = 0; i < fields.length -1; i++) {
+            int i;
+            for (i = 0; i < fields.length - 1; i++) {
                 output.printf("%s,", fields[i]);
             }
+            output.printf("%s", fields[i]);
             output.printf("\n");
 
             output.close();
             fileWriter.close();
+            return true;
 
         } catch (IOException e) {
             System.err.println("ERROR SAVING FILE!");
             e.printStackTrace();
+            return false;
         }
+    }
+
+    public abstract ArrayList readAll();
+
+    public File getCsv() {
+        return csv;
     }
 }

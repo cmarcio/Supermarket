@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfffed" height="350.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="450.0" />
+      <Rectangle height="253.0" layoutX="14.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="422.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.7714285714285715">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#bfffed" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text fill="#a51fff" layoutX="327.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By Márcio and Marly" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffb3a8" height="66.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="422.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a51fff42" height="8.0" layoutX="14.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="422.0" />
+      <Text fill="WHITE" layoutX="220.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ades Market">
+         <font>
+            <Font name="Segoe UI" size="36.0" />
+         </font>
+      </Text>
+      <TabPane layoutX="14.0" layoutY="80.0" prefHeight="253.0" prefWidth="422.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab closable="false" text="Produtos disponíveis">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="248.0" prefWidth="422.0">
+                     <children>
+                        <TableView prefHeight="143.0" prefWidth="422.0">
+                          <columns>
+                            <TableColumn fx:id="colNameAvailable" prefWidth="75.0" text="Nome" />
+                            <TableColumn fx:id="colProviderAvailable" prefWidth="75.0" text="Fornecedor" />
+                              <TableColumn fx:id="colExpireAvailable" prefWidth="75.0" text="Validade" />
+                              <TableColumn fx:id="colPriceAvailable" prefWidth="75.0" text="Preço" />
+                              <TableColumn fx:id="colCheck" prefWidth="75.0" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Button fx:id="btnBuy" layoutX="346.0" layoutY="152.0" mnemonicParsing="false" text="Comprar">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab closable="false" text="Produtos indisponíveis">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView prefHeight="143.0" prefWidth="422.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn fx:id="colNameUnavailable" prefWidth="75.0" text="Nome" />
+                              <TableColumn fx:id="colProviderUnavailable" prefWidth="75.0" text="Fornecedor" />
+                              <TableColumn fx:id="colExpireUnavailable" prefWidth="75.0" text="Validade" />
+                              <TableColumn fx:id="colPriceUnavailable" prefWidth="75.0" text="Preço" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

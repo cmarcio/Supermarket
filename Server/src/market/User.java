@@ -20,6 +20,15 @@ public class User {
         this.password = password;
     }
 
+    public User(String[] fields){
+        this.Name = fields[0];
+        this.address = fields[1];
+        this.phone = fields[2];
+        this.email = fields[3];
+        this.id = fields[4];
+        this.password = fields[5];
+    }
+
     public void setAddress(String address) {
         this.address = address;
     }
@@ -56,7 +65,7 @@ public class User {
         return id;
     }
 
-    private String getPassword() {
+    public String getPassword() {
         return password;
     }
 }

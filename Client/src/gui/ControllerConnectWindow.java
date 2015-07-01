@@ -1,6 +1,6 @@
 package gui;
 
-import connection.Connection;
+import connection.Communication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -30,7 +30,7 @@ public class ControllerConnectWindow extends ControllerStartWindow{
             try {
                 Socket socket = new Socket(txtIp.getText(), port);
                 // Salva o socket na classe de conexão
-                Connection.setSocket(socket);
+                Communication.setSocket(socket);
                 // Abre a janela inicial
                 loadWindow(btnConnect, "Inicio_cliente.fxml");
             } catch (IOException e) {   // Exibe mensagem de erro na conexão

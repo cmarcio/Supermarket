@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfffed" height="275.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="450.0" />
+      <Rectangle height="179.0" layoutX="14.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="422.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.7714285714285715">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#bfffed" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text fill="#a51fff" layoutX="327.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By Márcio and Marly" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffb3a8" height="66.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="422.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a51fff42" height="8.0" layoutX="14.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="422.0" />
+      <Text fill="WHITE" layoutX="129.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de produto">
+         <font>
+            <Font name="Segoe UI" size="32.0" />
+         </font>
+      </Text>
+      <Label layoutX="30.0" layoutY="90.0" text="Nome">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="245.0" layoutY="90.0" text="Validade">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="138.0" text="Fornecedor">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="245.0" layoutY="138.0" text="Preço">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="29.0" layoutY="110.0" prefHeight="25.0" prefWidth="177.0" />
+      <TextField fx:id="txtProvider" layoutX="29.0" layoutY="158.0" prefHeight="25.0" prefWidth="177.0" />
+      <TextField fx:id="txtExpire" layoutX="244.0" layoutY="110.0" prefHeight="25.0" prefWidth="177.0" />
+      <TextField fx:id="txtPrice" layoutX="244.0" layoutY="158.0" prefHeight="25.0" prefWidth="177.0" />
+      <Button fx:id="btnRegister" layoutX="350.0" layoutY="198.0" mnemonicParsing="false" text="Cadastrar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancel" layoutX="281.0" layoutY="198.0" mnemonicParsing="false" text="Cancelar" />
+   </children>
+</AnchorPane>
