@@ -665,6 +665,7 @@
       <workItem from="1435673039121" duration="336000" />
       <workItem from="1435678490104" duration="7429000" />
       <workItem from="1435693264631" duration="3343000" />
+      <workItem from="1435702071741" duration="33569000" />
     </task>
     <task id="LOCAL-00001" summary="Classes criadas">
       <created>1434600315050</created>
@@ -700,6 +701,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="71072000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
