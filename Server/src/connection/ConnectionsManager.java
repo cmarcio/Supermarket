@@ -43,11 +43,11 @@ public class ConnectionsManager implements Runnable {
             System.err.println("ERROR TRYING TO CREATING SOCKET ON PORT: " + port);
             //e.printStackTrace();
             // Muda a porta
-            if (port >= 0 && port < 65535)
-                port ++;
-            else port = 0;
+            //if (port >= 0 && port < 65535)
+            //    port ++;
+            //else port = 0;
             // Tenta de novo
-            this.run();
+            //this.run();
         } finally {
             // encerra as conexões
         }

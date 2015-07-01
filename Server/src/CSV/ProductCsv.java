@@ -1,13 +1,14 @@
 package csv;
 
+import gui.ControllerRegisterWindow;
 import market.Product;
 import market.User;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  * Created by Marcio on 30/06/2015.
@@ -50,5 +51,26 @@ public class ProductCsv extends FileCsv {
             }
         }
         return null;
+    }
+
+    public synchronized void updateFile(ArrayList<Product> list) {
+        FileWriter fileWriter = null;
+        try {
+            fileWriter = new FileWriter(getCsv());
+            PrintWriter output = new PrintWriter(fileWriter);
+
+            for(int i = 0; i < list.size(); i++){
+                Product product = list.get(i);
+                // Escreve os dados do livro no arquivo
+                output.printf("%s,%s,%s,%s,%s\n", product.getName(), product.getPrice(), product.getVendor(), product.getQuantity(), product.getExpirationDay());
+            }
+
+            output.close();
+            fileWriter.close();
+
+        } catch (IOException e) {
+            System.err.println("ERROR UPDATING PRODUCTS FILE!");
+            e.printStackTrace();
+        }
     }
 }

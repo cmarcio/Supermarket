@@ -1,6 +1,9 @@
 package connection;
 
+import market.Product;
+
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.io.PrintStream;
 import java.net.Socket;
 

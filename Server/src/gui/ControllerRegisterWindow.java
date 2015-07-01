@@ -35,7 +35,7 @@ public class ControllerRegisterWindow extends ControllerStartWindow {
                 }
             }
             // Salva as variáveis dos campos
-            String[] str = {txtName.getText(), txtPrice.getText(), txtVendor.getText(), "0"};
+            String[] str = {txtName.getText(), txtPrice.getText(), txtVendor.getText(), "0", "undefined"};
             // Salva o produto em arquivo
             ProductCsv productCsv = new ProductCsv("Product.csv");
             if(productCsv.store(str)){

@@ -1,7 +1,9 @@
 package connection;
 
 import csv.UserCsv;
+import gui.ControllerRegisterWindow;
 import gui.ControllerStartWindow;
+import market.Product;
 import market.User;
 
 import java.net.Socket;
@@ -26,6 +28,8 @@ public class Communication implements Runnable{
 
             // Se o objeto de leitura recebeu um usuário
             if (receiver.hasUser()) {
+                boolean flag = true;
+                receiver.setUser(false);
                 System.out.println("recebeu usuário");
                 String[] fields = receiver.getUserFields();
                 // cria objeto com os dados do usuario
@@ -36,24 +40,29 @@ public class Communication implements Runnable{
                         // Se já existe retorna erro
                         send.sendString("ja existe");
                         System.out.println("enviou erro");
-                        return;
+                        flag = false;
                     }
                 }
 
-                // Salva em arquivo
-                if (userCsv.store(fields)){
-                    // Envia reposta
-                    ControllerStartWindow.users.add(user);
-                    send.sendString("user saved");
-                    System.out.println("enviou confirmação");
+                if (flag){
+                    // Salva em arquivo
+                    if (userCsv.store(fields)){
+                        // Envia reposta
+                        ControllerStartWindow.users.add(user);
+                        send.sendString("user saved");
+                        System.out.println("enviou confirmação");
+                    }
+                    else {
+                        send.sendString("user not saved");
+                        System.out.println("enviou erro");
+                    }
                 }
-                else {
-                    send.sendString("user not saved");
-                    System.out.println("enviou erro");
-                }
+
             }
             // Se o objeto de leitura recebeu um pedido de login
             else if (receiver.loginRequest()) {
+                boolean flag = true;
+                receiver.setLoginRequest(false);
                 System.out.println("recebeu pedido de login");
                 String[] fields = receiver.getUserFields();
                 // Verifica se o usuário e a senha estão corretos
@@ -63,14 +72,34 @@ public class Communication implements Runnable{
                         // Se existe retorna ok
                         send.sendString("ok");
                         System.out.println("logou");
-                        return;
+                        flag = false;
                     }
                 }
+                if (flag) {
+                    // Se não encontrou login e senha retorna fail
+                    send.sendString("fail");
+                    System.out.println("não logou");
+                }
+            }
+            // Se houve um pedido pela lista de produtos
+            else if (receiver.sendList()) {
+                receiver.setSendList(false);
+                System.out.println("recebeu pedido de enviar estoque");
 
-                // Se não encontrou login e senha retorna fail
-                send.sendString("fail");
-                System.out.println("não logou");
+                // Envia o tamanho da lista
+                send.sendString(Integer.toString(ControllerStartWindow.products.size()));
+                for (int i = 0; i < ControllerRegisterWindow.products.size(); i++) {
+                    // Envia objeto produto
+                    Product product = ControllerRegisterWindow.products.get(i);
+                    send.sendString(product.getName());
+                    send.sendString(Float.toString(product.getPrice()));
+                    send.sendString(product.getVendor());
+                    send.sendString(Integer.toString(product.getQuantity()));
+                    send.sendString(product.expirationDay);
+
+                }
             }
         }
+
     }
 }

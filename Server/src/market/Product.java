@@ -35,9 +35,6 @@ public class Product {
         this.expirationDay = expirationDay;
     }
 
-    public void updateQuantity(int number) {
-        quantity = quantity + number;
-    }
 
     public String getName() {
         return name;
@@ -57,6 +54,10 @@ public class Product {
 
     public int getQuantity() {
         return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }
 

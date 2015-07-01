@@ -14,6 +14,7 @@ public class Receiver {
     private String[] userFields;
     private boolean user = false;
     private boolean loginRequest = false;
+    private boolean sendList = false;
 
     public Receiver(Socket socket) {
         this.socket = socket;
@@ -45,6 +46,12 @@ public class Receiver {
                 // Seta que há um pedido de logim
                 loginRequest = true;
             }
+            else if(command.compareTo("get inventory") == 0) {
+                // Seta que é preciso enviar a lista de produtos
+                sendList = true;
+            }
+
+
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -57,11 +64,26 @@ public class Receiver {
     }
 
     public String[] getUserFields() {
-        user = false;
         return userFields;
     }
 
     public boolean loginRequest() {
         return loginRequest;
+    }
+
+    public boolean sendList() {
+        return sendList;
+    }
+
+    public void setUser(boolean user) {
+        this.user = user;
+    }
+
+    public void setLoginRequest(boolean loginRequest) {
+        this.loginRequest = loginRequest;
+    }
+
+    public void setSendList(boolean sendList) {
+        this.sendList = sendList;
     }
 }

@@ -2,19 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Server/src/gui/AtualizarEstoque_server.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Server/src/gui/ControllerRegisterWindow.java" />
-      <change type="DELETED" beforePath="F:\Documents\USP\3º Período\POO\JAVA\Trabalho-4\Supermarket\Server\out\production\Server\gui\Controller.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/ControllerBuyWindow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Server/src/gui/ControllerListWindow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Server/src/gui/ControllerUpdateWindow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Client/connection/Communication.class" afterPath="$PROJECT_DIR$/out/production/Client/connection/Communication.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/Server/connection/Communication.class" afterPath="$PROJECT_DIR$/../Server/out/production/Server/connection/Communication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/Server/connection/ConnectionsManager.class" afterPath="$PROJECT_DIR$/../Server/out/production/Server/connection/ConnectionsManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Client/gui/ControllerLoginWindow.class" afterPath="$PROJECT_DIR$/out/production/Client/gui/ControllerLoginWindow.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/Server/gui/ControllerStartWindow.class" afterPath="$PROJECT_DIR$/../Server/out/production/Server/gui/ControllerStartWindow.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/Server/gui/Main.class" afterPath="$PROJECT_DIR$/../Server/out/production/Server/gui/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/gui/CadastrarProduto_server.fxml" afterPath="$PROJECT_DIR$/../Server/src/gui/CadastrarProduto_server.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Client/market/Product.class" afterPath="$PROJECT_DIR$/out/production/Client/market/Product.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/Server/market/Product.class" afterPath="$PROJECT_DIR$/../Server/out/production/Server/market/Product.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/Server/csv/ProductCsv.class" afterPath="$PROJECT_DIR$/../Server/out/production/Server/csv/ProductCsv.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/Server/connection/Receiver.class" afterPath="$PROJECT_DIR$/../Server/out/production/Server/connection/Receiver.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/Server/connection/Sender.class" afterPath="$PROJECT_DIR$/../Server/out/production/Server/connection/Sender.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/Server/gui/AtualizarEstoque_server.fxml" afterPath="$PROJECT_DIR$/../Server/out/production/Server/gui/AtualizarEstoque_server.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/gui/AtualizarEstoque_server.fxml" afterPath="$PROJECT_DIR$/../Server/src/gui/AtualizarEstoque_server.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/Server/gui/CadastrarProduto_server.fxml" afterPath="$PROJECT_DIR$/../Server/out/production/Server/gui/CadastrarProduto_server.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/connection/Communication.java" afterPath="$PROJECT_DIR$/src/connection/Communication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/connection/Communication.java" afterPath="$PROJECT_DIR$/../Server/src/connection/Communication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/Server/gui/Principal_server.fxml" afterPath="$PROJECT_DIR$/../Server/out/production/Server/gui/Principal_server.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/gui/Principal_server.fxml" afterPath="$PROJECT_DIR$/../Server/src/gui/Principal_server.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/connection/ConnectionsManager.java" afterPath="$PROJECT_DIR$/../Server/src/connection/ConnectionsManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/gui/ControllerRegisterWindow.java" afterPath="$PROJECT_DIR$/../Server/src/gui/ControllerRegisterWindow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/gui/ControllerStartWindow.java" afterPath="$PROJECT_DIR$/../Server/src/gui/ControllerStartWindow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/out/production/Server/gui/Listar_server.fxml" afterPath="$PROJECT_DIR$/../Server/out/production/Server/gui/Listar_server.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/gui/Listar_server.fxml" afterPath="$PROJECT_DIR$/../Server/src/gui/Listar_server.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Client/gui/Principal_cliente.fxml" afterPath="$PROJECT_DIR$/out/production/Client/gui/Principal_cliente.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/Principal_cliente.fxml" afterPath="$PROJECT_DIR$/src/gui/Principal_cliente.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/market/Product.java" afterPath="$PROJECT_DIR$/src/market/Product.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/market/Product.java" afterPath="$PROJECT_DIR$/../Server/src/market/Product.java" />
+      <change type="MODIFICATION" beforePath="F:\Documents\USP\3º Período\POO\JAVA\Trabalho-4\Supermarket\Server\src\csv\ProductCsv.java" afterPath="$PROJECT_DIR$/../Server/src/csv/ProductCsv.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/connection/Receiver.java" afterPath="$PROJECT_DIR$/../Server/src/connection/Receiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/src/connection/Sender.java" afterPath="$PROJECT_DIR$/../Server/src/connection/Sender.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Server/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="F:\Documents\USP\3º Período\POO\JAVA\Trabalho-4\Supermarket\Server\src\gui\Controller.java" afterPath="$PROJECT_DIR$/../Server/src/gui/ControllerStartWindow.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,15 +95,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Communication.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Communication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/connection/Communication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.7136">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#323#324#0" expanded="true" />
-                <element signature="e#368#369#0" expanded="true" />
+                <element signature="e#272#273#0" expanded="true" />
+                <element signature="e#317#318#0" expanded="true" />
+                <element signature="e#3797#3806#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/market/Product.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding>
+                <element signature="e#779#780#0" expanded="true" />
+                <element signature="e#829#830#0" expanded="true" />
+                <element signature="e#980#981#0" expanded="true" />
+                <element signature="e#1009#1010#0" expanded="true" />
+                <element signature="e#1193#1194#0" expanded="true" />
+                <element signature="e#1233#1234#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,9 +131,23 @@
         <entry file="file://$PROJECT_DIR$/src/gui/ControllerLoginWindow.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+              <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControllerBuyWindow.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/gui/ControllerBuyWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.29512194">
+              <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1831#1832#0" expanded="true" />
+                <element signature="e#1886#1887#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,7 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/market/Product.java" />
         <option value="$PROJECT_DIR$/src/market/Vendor.java" />
         <option value="$PROJECT_DIR$/src/gui/Controller.java" />
         <option value="$PROJECT_DIR$/src/csv/csv.java" />
@@ -158,9 +209,12 @@
         <option value="$PROJECT_DIR$/src/gui/ControllerStartWindow.java" />
         <option value="$PROJECT_DIR$/src/connection/Connection.java" />
         <option value="$PROJECT_DIR$/src/gui/ControllerRegisterWindow.java" />
-        <option value="$PROJECT_DIR$/src/connection/Communication.java" />
         <option value="$PROJECT_DIR$/src/gui/Login_cliente.fxml" />
+        <option value="$PROJECT_DIR$/src/gui/ControllerListWindow.java" />
+        <option value="$PROJECT_DIR$/src/market/Product.java" />
+        <option value="$PROJECT_DIR$/src/gui/ControllerBuyWindow.java" />
         <option value="$PROJECT_DIR$/src/gui/ControllerLoginWindow.java" />
+        <option value="$PROJECT_DIR$/src/connection/Communication.java" />
       </list>
     </option>
   </component>
@@ -611,7 +665,6 @@
       <workItem from="1435673039121" duration="336000" />
       <workItem from="1435678490104" duration="7429000" />
       <workItem from="1435693264631" duration="3343000" />
-      <workItem from="1435702071741" duration="20846000" />
     </task>
     <task id="LOCAL-00001" summary="Classes criadas">
       <created>1434600315050</created>
@@ -647,7 +700,6 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58349000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -661,7 +713,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22222222" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
@@ -710,13 +762,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/gui/ControllerStartWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/ControllerRegisterWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -960,13 +1005,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/market/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/Inicio_cliente.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -1064,14 +1102,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/ControllerStartWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1080,24 +1110,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/ControllerLoginWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/gui/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/market/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#829#830#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1009#1010#0" expanded="true" />
+            <element signature="e#1193#1194#0" expanded="true" />
+            <element signature="e#1233#1234#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/connection/Communication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7136">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#3797#3806#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/ControllerLoginWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/ControllerBuyWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29512194">
+          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1831#1832#0" expanded="true" />
+            <element signature="e#1886#1887#0" expanded="true" />
           </folding>
         </state>
       </provider>
