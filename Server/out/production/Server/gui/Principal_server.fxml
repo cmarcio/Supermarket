@@ -7,7 +7,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ControllerStartWindow">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfffed" height="300.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="315.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffb3a8" height="66.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="287.0" />
@@ -27,18 +27,18 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Button fx:id="btnRegister" layoutX="80.0" layoutY="97.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="155.0" text="Cadastrar produto">
+      <Button fx:id="btnRegister" layoutX="80.0" layoutY="97.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="37.0" prefWidth="155.0" text="Cadastrar produto">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnList" layoutX="80.0" layoutY="146.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="155.0" text="Listar">
+      <Button fx:id="btnList" layoutX="80.0" layoutY="146.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="37.0" prefWidth="155.0" text="Listar">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
       <Text fill="#a51fff" layoutX="191.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By Márcio and Marly" />
-      <Button fx:id="btnRefresh" layoutX="80.0" layoutY="195.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="155.0" text="Atualizar estoque">
+      <Button fx:id="btnRefresh" layoutX="80.0" layoutY="195.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="37.0" prefWidth="155.0" text="Atualizar estoque">
          <font>
             <Font size="15.0" />
          </font>

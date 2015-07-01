@@ -8,7 +8,7 @@ import java.util.GregorianCalendar;
 public class Product {
     public String name;
     public float price;
-    public GregorianCalendar expirationDay;
+    public String expirationDay;
     public String vendor;
     public int quantity;
 
@@ -24,13 +24,14 @@ public class Product {
         this.price = Float.parseFloat(fields[1]);
         this.vendor = fields[2];
         this.quantity = Integer.parseInt(fields[3]);
+        this.expirationDay = fields[4];
     }
 
     public void setPrice(float price) {
         this.price = price;
     }
 
-    public void setExpirationDay(GregorianCalendar expirationDay) {
+    public void setExpirationDay(String expirationDay) {
         this.expirationDay = expirationDay;
     }
 
@@ -50,7 +51,7 @@ public class Product {
         return vendor;
     }
 
-    public GregorianCalendar getExpirationDay() {
+    public String getExpirationDay() {
         return expirationDay;
     }
 

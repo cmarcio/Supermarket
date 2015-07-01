@@ -1,7 +1,7 @@
 package connection;
 
 import csv.UserCsv;
-import gui.Controller;
+import gui.ControllerStartWindow;
 import market.User;
 
 import java.net.Socket;
@@ -31,8 +31,8 @@ public class Communication implements Runnable{
                 // cria objeto com os dados do usuario
                 User user = new User(fields);
                 // Verifica se o usuário já existe
-                for(int i = 0; i < Controller.users.size(); i++) {
-                    if (Controller.users.get(i).getId().compareTo(user.getId()) == 0){
+                for(int i = 0; i < ControllerStartWindow.users.size(); i++) {
+                    if (ControllerStartWindow.users.get(i).getId().compareTo(user.getId()) == 0){
                         // Se já existe retorna erro
                         send.sendString("ja existe");
                         System.out.println("enviou erro");
@@ -43,7 +43,7 @@ public class Communication implements Runnable{
                 // Salva em arquivo
                 if (userCsv.store(fields)){
                     // Envia reposta
-                    Controller.users.add(user);
+                    ControllerStartWindow.users.add(user);
                     send.sendString("user saved");
                     System.out.println("enviou confirmação");
                 }
@@ -57,9 +57,9 @@ public class Communication implements Runnable{
                 System.out.println("recebeu pedido de login");
                 String[] fields = receiver.getUserFields();
                 // Verifica se o usuário e a senha estão corretos
-                for(int i = 0; i < Controller.users.size(); i++) {
-                    if (Controller.users.get(i).getId().compareTo(fields[0]) == 0 &&
-                            Controller.users.get(i).getPassword().compareTo(fields[1]) == 0){
+                for(int i = 0; i < ControllerStartWindow.users.size(); i++) {
+                    if (ControllerStartWindow.users.get(i).getId().compareTo(fields[0]) == 0 &&
+                            ControllerStartWindow.users.get(i).getPassword().compareTo(fields[1]) == 0){
                         // Se existe retorna ok
                         send.sendString("ok");
                         System.out.println("logou");
