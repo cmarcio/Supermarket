@@ -12,16 +12,18 @@ import java.util.ArrayList;
 public class Receiver {
     private Socket socket;
     private String[] userFields;
+    private String productName;
     private boolean user = false;
     private boolean loginRequest = false;
     private boolean sendList = false;
+    private boolean buy = false;
 
     public Receiver(Socket socket) {
         this.socket = socket;
         userFields = new String[6];
     }
 
-    public void read() {
+    public boolean read() {
         //Cria um BufferedReader para o canal da stream de entrada de dados do socket s
         BufferedReader input = null;
         try {
@@ -50,13 +52,22 @@ public class Receiver {
                 // Seta que é preciso enviar a lista de produtos
                 sendList = true;
             }
+            else if(command.compareTo("buy") == 0) {
+                // Le o nome do produto
+                // Seta que uma compra foi solicitada
+                productName = input.readLine();
+                buy = true;
 
+            }
 
+            return true;
 
         } catch (IOException e) {
             e.printStackTrace();
             System.err.println("ERROR WHILE PROCESSING THE COMMAND");
         }
+
+        return false;
     }
 
     public boolean hasUser() {
@@ -85,5 +96,17 @@ public class Receiver {
 
     public void setSendList(boolean sendList) {
         this.sendList = sendList;
+    }
+
+    public void setBuy(boolean buy) {
+        this.buy = buy;
+    }
+
+    public boolean hasBuy() {
+        return buy;
+    }
+
+    public String getProductName() {
+        return productName;
     }
 }

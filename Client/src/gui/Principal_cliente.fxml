@@ -46,8 +46,8 @@
                               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                            </columnResizePolicy>
                         </TableView>
-                        <TextField fx:id="txtNameAvailable" layoutX="137.0" layoutY="152.0" />
-                        <Button fx:id="btnBuy" layoutX="346.0" layoutY="152.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Comprar">
+                        <TextField fx:id="txtNameAvailable" layoutX="212.0" layoutY="153.0" prefHeight="25.0" prefWidth="124.0" />
+                        <Button fx:id="btnBuy" layoutX="346.0" layoutY="153.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Comprar">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -70,8 +70,6 @@
                               <TableColumn fx:id="unavailablePriceColumn" prefWidth="75.0" text="Preço" />
                            </columns>
                         </TableView>
-                        <Button fx:id="btnNotify" layoutX="293.0" layoutY="153.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Solicitar Notificação" />
-                        <TextField fx:id="txtNameUnavailable" layoutX="137.0" layoutY="153.0" />
                      </children>
                   </AnchorPane>
             </content>

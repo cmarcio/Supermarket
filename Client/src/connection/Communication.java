@@ -122,4 +122,35 @@ public class Communication {
         }
         return null;
     }
+
+    public boolean buy(String name) {
+        PrintStream output = null;
+        try {
+            //Cria a Stream de saida de dados
+            output = new PrintStream(socket.getOutputStream());
+            // Envia o comando
+            output.println("buy");
+            System.out.println("enviou comando");
+            // Envia os dados do usuário
+            output.println(name);
+            System.out.println("enviou dados");
+
+            //Cria um BufferedReader para o canal da stream de entrada de dados do socket s
+            BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            //Aguarda por algum dado e verifica qual foi a resposta do servidor
+            String answer = input.readLine();
+            System.out.println("recebeu resposta");
+            if(answer.compareTo("ok") == 0){
+                return true;
+            }
+            else {
+                return false;
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("ERROR WHILE TRYING TO BUY");
+            return false;
+        }
+    }
 }

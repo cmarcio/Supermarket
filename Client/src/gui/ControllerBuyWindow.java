@@ -6,10 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import market.Product;
 
@@ -22,9 +19,7 @@ import java.util.ResourceBundle;
  */
 public class ControllerBuyWindow extends ControllerStartWindow implements Initializable{
     @FXML private Button btnBuy;
-    @FXML private Button btnNotify;
     @FXML private TextField txtNameAvailable;
-    @FXML private TextField txtNameUnavailable;
 
     // Tabela de Produtos disponíveis
     @FXML private TableView<Product> availableTable;
@@ -45,6 +40,37 @@ public class ControllerBuyWindow extends ControllerStartWindow implements Initia
 
     @FXML private void handleButtonAction(ActionEvent event) {
         Button btn = (Button) event.getSource();
+        boolean flag = false;
+        // Se o usuários solicitar uma compra
+        if (btn == btnBuy && !txtNameAvailable.getText().isEmpty()) {
+            // Verifica se o item está disponível no estoque
+            for(int i = 0; i < availableData.size(); i++) {
+                if (availableData.get(i).getName().compareTo(txtNameAvailable.getText()) ==0 )
+                    flag = true;
+            }
+            // Se o item não está na lista de itens disponíveis sai do método
+            if (!flag) {
+                showMessage("Erro", "Item inexistente", "O item solicitado não está na nossa lista de produtos disponíveis", Alert.AlertType.ERROR);
+                return;
+            }
+
+            // Pede para o servidor efetivar a compra
+            Communication communication = new Communication();
+            if (communication.buy(txtNameAvailable.getText())){
+                // Se o produto ainda está em estoque
+                showMessage("Parabens", "Compra Efetuada", "Em email será enviado com as instrucoes de pagamento", Alert.AlertType.INFORMATION);
+                // Chama a janela de novo
+                loadWindow(btnBuy, "Principal_cliente.fxml");
+            }
+            // Se o produto não está mais disponível no servidor
+            else
+                showMessage("Erro", null, "Produto esgotado", Alert.AlertType.ERROR);
+
+
+        }
+        else{
+            showMessage("Aviso", "Compo Vazio", "Preencha o campo com o nome do produto desejado", Alert.AlertType.WARNING);
+        }
     }
 
     @FXML

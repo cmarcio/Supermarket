@@ -7,10 +7,10 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ControllerListWindow">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ControllerListWindow">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfffed" height="315.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="450.0" />
-      <Rectangle height="219.0" layoutX="14.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="422.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfffed" height="345.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="450.0" />
+      <Rectangle height="251.0" layoutX="14.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="422.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.7714285714285715">
                <stops>
@@ -64,12 +64,12 @@
           </Tab>
         </tabs>
       </TabPane>
-      <Text fill="#a51fff" layoutX="327.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By Márcio and Marly" />
+      <Text fill="#a51fff" layoutX="327.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By Márcio and Marly" />
       <Text fill="WHITE" layoutX="209.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Listar produtos">
          <font>
             <Font name="Segoe UI" size="32.0" />
          </font>
       </Text>
-      <Button fx:id="cancelBtn" layoutX="199.0" layoutY="284.0" mnemonicParsing="false" onAction="#handleCancelButton" text="Cancelar" />
+      <Button fx:id="cancelBtn" layoutX="364.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleCancelButton" text="Cancelar" />
    </children>
 </AnchorPane>
